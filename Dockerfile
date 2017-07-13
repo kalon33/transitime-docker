@@ -42,7 +42,7 @@ EXPOSE 8080
 WORKDIR /
 
 RUN \
-        git clone https://github.com/walkeriniraq/transittime-core.git && \
+        git clone https://github.com/kalon33/transittime-core.git && \
         cd transittime-core && \
         git checkout cap-metro && \
         mvn install -DskipTests && \

@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 export PGPASSWORD=transitime
 java \
-        -Dtransitime.db.dbName=cap-metro \
+        -Dtransitime.db.dbName=stif \
         -Dtransitime.db.dbType=postgresql \
         -Dtransitime.db.dbUserName=postgres \
         -Dtransitime.db.dbPassword=$PGPASSWORD \
-        -Dtransitime.core.agencyId=cap-metro \
+        -Dtransitime.core.agencyId=stif \
         -Dtransitime.hibernate.configFile=/usr/local/transitime/hibernate.cfg.xml \
-        -Dhibernate.connection.url=jdbc:postgresql://$POSTGRES_PORT_5432_TCP_ADDR:$POSTGRES_PORT_5432_TCP_PORT/cap-metro \
+        -Dhibernate.connection.url=jdbc:postgresql://$POSTGRES_PORT_5432_TCP_ADDR:$POSTGRES_PORT_5432_TCP_PORT/stif \
         -Dhibernate.connection.username=postgres \
         -Dhibernate.connection.password=$PGPASSWORD \
 	-cp /usr/local/transitime/transitime.jar \
