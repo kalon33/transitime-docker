@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 export PGPASSWORD=transitime
-java \
+java -Xmx3G\
 	-Dtransitime.db.dbName=stif \
 	-Dtransitime.db.dbType=postgresql \
 	-Dtransitime.db.dbUserName=postgres \

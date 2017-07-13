@@ -23,10 +23,11 @@ RUN gpg --keyserver pool.sks-keyservers.net --recv-keys \
 	A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 \
 	DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 \
 	F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE \
-	F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23
+	F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23 \
+        D63011C7
 
 ENV TOMCAT_MAJOR 8
-ENV TOMCAT_VERSION 8.0.26
+ENV TOMCAT_VERSION 8.0.45
 ENV TOMCAT_TGZ_URL https://www.apache.org/dist/tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz
 
 RUN set -x \
@@ -44,7 +45,7 @@ WORKDIR /
 RUN \
         git clone https://github.com/kalon33/transittime-core.git && \
         cd transittime-core && \
-        git checkout cap-metro && \
+        git checkout stif && \
         mvn install -DskipTests && \
         cd / && \
         mkdir /usr/local/transitime && \
